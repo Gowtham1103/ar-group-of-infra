@@ -1,0 +1,89 @@
+#about {
+    background: var(--bg-secondary);
+}
+
+/* About section */
+#about .about__content {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Image */
+#about .about__image {
+    overflow: hidden;
+    border-radius: var(--radius-2);
+    max-width: 400px;
+    margin: auto;
+}
+
+#about .about__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* About content */
+#about .about__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Key points */
+#about .point {
+    margin: 10px 0;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+#about .point .icon__container {
+   
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Achievements */
+#about .achieve {
+    margin-top: 40px;
+    background-image: url("../../assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-2);
+    overflow: hidden;
+}
+
+#about .achieve .overlay {
+    padding: 1rem;
+}
+
+/* Tablet / Mobile */
+@media (max-width: 930px) {
+
+    #about .about__content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    #about .about__image {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #about .about__image {
+        max-width: 100%;
+    }
+
+    #about .achieve {
+        margin-top: 30px;
+    }
+
+    #about .achieve .overlay {
+        padding: 1rem;
+    }
+}

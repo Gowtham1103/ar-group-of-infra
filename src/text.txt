@@ -1,0 +1,80 @@
+<-----------logo img code -------->
+
+<div className="flex__container icon__container">
+            <img  src={logo} alt="" style={{marginLeft:"5px"}}/>
+           </div>
+
+<---------------------------------->
+
+<span className="primary" style={{fontSize:"17px"}}> AR </span>
+
+import ReactOdometer from "react-odometerjs";
+import "odometer/themes/odometer-theme-default.css";
+import "./Achievement.css";
+import { useState } from "react";
+
+
+function Achievement() {
+    const [projects, setProjects] = useState(0);
+    const [satisfaction, setSatisfaction] = useState(0);
+    const [experience, setExperience] = useState(0);
+
+    const updateDate = () =>{
+    const timeout = setTimeout(() => {
+            setProjects(75);
+            setSatisfaction(93);
+            setExperience(5);
+        }, 3000);
+
+        return () => {
+            clearTimeout(timeout);
+        };
+    }
+
+
+    return (
+        <div className="flex achievements" >
+
+            {/* 1 */}
+            <div className="achievements__card">
+                <h3 className="title">Completed</h3>
+
+                <div className="flex">
+                    <ReactOdometer value={projects} className="heading" />
+                     <h1 className="heading">+</h1>
+                   
+                </div>
+
+                <p>Projects Across Diverse Sectors</p>
+            </div>
+
+            {/* 2 */}
+            <div className="achievements__card">
+                <h3 className="title">Achieved</h3>
+
+                <div className="flex">
+                    <ReactOdometer value={satisfaction} className="heading" />
+                    <h1 className="heading">%</h1>
+                </div>
+
+                <p>Client Satisfaction Rate</p>
+            </div>
+
+            {/* 3 */}
+            <div className="achievements__card">
+                <h3 className="title">Over</h3>
+
+                <div className="flex">
+                    <ReactOdometer value={experience} className="heading" />
+                     <h1 className="heading">+</h1>
+                    
+                </div>
+
+                <p>Years of Operations</p>
+            </div>
+
+        </div>
+    );
+}
+
+export default Achievement;
