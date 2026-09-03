@@ -1,5 +1,4 @@
-import { color } from "d3";
-import { logo } from "../../assets"
+
 function Logo(){
     return(
         <div className="flex__center logo__container">
