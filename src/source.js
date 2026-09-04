@@ -151,10 +151,7 @@ export const footer = [
         name: "About Us",
         href: "#about",
       },
-      {
-        name: "Careers",
-        href: "#",
-      },
+      
       {
         name: "Contact Us",
         href: "#contact",
@@ -166,39 +163,23 @@ export const footer = [
     routes: [
       {
         name: "Residential Construction",
-        href: "#",
+        href: "#services",
       },
       {
         name: "Commercial Projects",
-        href: "#",
+        href: "#services",
       },
       {
         name: "Renovation & Remodeling",
-        href: "#",
+        href: "#services",
       },
       {
         name: "Project Management",
-        href: "#",
+        href: "#services",
       },
     ],
   },
-  {
-    title: "Resources",
-    routes: [
-      {
-        name: "Case Studies",
-        href: "#",
-      },
-      {
-        name: "FAQs",
-        href: "#",
-      },
-      {
-        name: "Privacy Policy",
-        href: "#",
-      },
-    ],
-  },
+  
 ];
 
 export const socialHandles = [

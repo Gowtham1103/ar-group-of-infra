@@ -2,8 +2,9 @@
   "name": "ar-group-of-infra-1.0",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gowtham1103.github.io/ar-group-of-infra-1.0",
+  "homepage": "https://gowtham1103.github.io/ar-group-of-infra",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.2",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.2",
