@@ -164,6 +164,9 @@ export const footer = [
       {
         name: "Residential Construction",
         href: "#services",
+      },{
+        name: "Interior Designs and Executions",
+        href: "#services",
       },
       {
         name: "Commercial Projects",
@@ -177,6 +180,7 @@ export const footer = [
         name: "Project Management",
         href: "#services",
       },
+       
     ],
   },
   
@@ -186,21 +190,17 @@ export const socialHandles = [
   {
     name: "Facebook",
     icon: <FaFacebook />,
-    link: "https://www.facebook.com",
+    link: "https://www.facebook.com/profile.php?id=61594040343388",
   },
   {
     name: "Instagram",
     icon: <FaInstagram />,
     link: "https://www.instagram.com/ar_infragroup.in?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==",
   },
-  {
-    name: "LinkedIn",
-    icon: <FaLinkedin />,
-    link: "https://www.linkedin.com",
-  },
+  
   {
     name: "Youtube",
     icon: <FaYoutube />,
-    link: "https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1",
+    link: "https://youtube.com/@arinfragroup?si=Gdx3mKUavYqiYIng",
   },
 ];

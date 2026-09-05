@@ -40,7 +40,7 @@ function Header() {
               </h1>
 
               <p className="description">
-                We deliver complete construction solutions, ensuring quality
+                We deliver complete construction solutions, Interior Designs and Executions & ensuring quality
                 and reliability from start to finish.
               </p>
 
