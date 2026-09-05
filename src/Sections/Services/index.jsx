@@ -118,7 +118,7 @@ function Services() {
               <p className="description">
                 At{" "}
                 <span style={{ color: "#ff4400" }}>
-                  AR Group of Infra,
+                  AR Infra Group,
                 </span>{" "}
                 we are driven by a passion for creating outstanding
                 construction projects that stand the test of time.

@@ -52,7 +52,7 @@ function About() {
 
             <p className="description">
               <span style={{ color: "red" }}>
-                At AR Group of Infra,
+                At AR Infra Group,
               </span>{" "}
               We have successfully completed 75+ projects, delivering quality
               construction solutions with precision, innovation, and dedication.
