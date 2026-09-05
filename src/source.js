@@ -6,7 +6,6 @@ import {
   FaUserFriends,
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaYoutube,
   FaHome,
   FaBuilding,
