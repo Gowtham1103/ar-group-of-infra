@@ -191,7 +191,7 @@ export const socialHandles = [
   {
     name: "Instagram",
     icon: <FaInstagram />,
-    link: "https://www.instagram.com/ar_groups.in?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==",
+    link: "https://www.instagram.com/ar_infragroup.in?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==",
   },
   {
     name: "LinkedIn",
