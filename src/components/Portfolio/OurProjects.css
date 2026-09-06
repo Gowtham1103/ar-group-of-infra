@@ -1,0 +1,640 @@
+/* =====================================================
+   OUR PROJECTS PAGE
+   Fully isolated from Home / Portfolio / OurDesigns
+===================================================== */
+
+.projects__page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--bg-primary);
+  color: var(--text-color);
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.projects__navbar {
+  width: 100%;
+  height: 75px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding: 0 30px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: var(--bg-secondary);
+
+  border-bottom: var(--gray-border);
+  box-shadow: var(--box-shadow);
+
+  z-index: 9999;
+}
+
+
+.projects__back {
+  justify-self: start;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--text-color);
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: var(--transition);
+}
+
+
+.projects__back svg {
+  color: var(--primary);
+
+  font-size: 16px;
+
+  transition: var(--transition);
+}
+
+
+.projects__back:hover {
+  color: var(--primary);
+}
+
+
+.projects__back:hover svg {
+  transform: translateX(-4px);
+}
+
+
+.projects__nav__title {
+  justify-self: center;
+
+  margin: 0;
+
+  color: var(--text-color);
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+.projects__nav__title::after {
+  content: "";
+
+  display: block;
+
+  width: 35px;
+  height: 2px;
+
+  margin: 5px auto 0;
+
+  background: var(--primary);
+
+  border-radius: 5px;
+}
+
+
+.projects__nav__spacer {
+  justify-self: end;
+
+  width: 70px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.projects__main {
+  width: 100%;
+  min-height: 100vh;
+
+  padding-top: 75px;
+
+  background: var(--bg-primary);
+}
+
+
+.projects__container {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 70px 25px 100px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.projects__header {
+  width: 100%;
+  max-width: 750px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+
+.projects__header > span {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  color: var(--primary);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+.projects__header h1 {
+  margin: 5px 0 15px;
+
+  color: var(--text-color);
+
+  font-size: 42px;
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+
+.projects__header p {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   PROJECT GALLERY
+   Mixed image dimensions supported
+===================================================== */
+
+.projects__gallery {
+  width: 100%;
+
+  columns: 3;
+
+  column-gap: 22px;
+}
+
+
+/* =====================================================
+   PROJECT IMAGE
+===================================================== */
+
+.projects__image {
+  width: 100%;
+
+  display: inline-block;
+
+  margin-bottom: 22px;
+
+  break-inside: avoid;
+
+  overflow: hidden;
+
+  background: var(--bg-secondary);
+
+  border: var(--gray-border);
+
+  border-radius: var(--radius-2);
+
+  box-shadow: var(--box-shadow);
+}
+
+
+.projects__image img {
+  width: 100%;
+  height: auto;
+
+  min-height: 0;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.5s ease;
+}
+
+
+.projects__image:hover img {
+  transform: scale(1.025);
+}
+
+
+/* =====================================================
+   CUSTOM PROJECT MESSAGE
+===================================================== */
+
+.projects__custom {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 75px auto 0;
+
+  padding: 45px 35px;
+
+  text-align: center;
+
+  background: var(--bg-secondary);
+
+  border: var(--gray-border);
+
+  border-radius: var(--radius-2);
+
+  box-shadow: var(--box-shadow);
+}
+
+
+.projects__custom__label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--primary);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+.projects__custom h2 {
+  margin: 0 0 15px;
+
+  color: var(--text-color);
+
+  font-size: 28px;
+  font-weight: 600;
+
+  line-height: 1.3;
+}
+
+
+.projects__custom p {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0 auto 25px;
+
+  color: var(--text-muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+.projects__custom__btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 24px;
+
+  background: var(--primary);
+
+  color: #ffffff;
+
+  border-radius: var(--radius-1);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: var(--transition);
+}
+
+
+.projects__custom__btn:hover {
+  background: var(--primary-accent);
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--box-shadow);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.projects__footer {
+  width: 100%;
+
+  padding: 22px 20px;
+
+  background: var(--bg-secondary);
+
+  border-top: var(--gray-border);
+
+  text-align: center;
+}
+
+
+.projects__footer p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 930px) {
+
+  .projects__navbar {
+    height: 70px;
+
+    padding: 0 20px;
+  }
+
+
+  .projects__main {
+    padding-top: 70px;
+  }
+
+
+  .projects__container {
+    padding: 55px 20px 80px;
+  }
+
+
+  .projects__header {
+    margin-bottom: 40px;
+  }
+
+
+  .projects__header h1 {
+    font-size: 34px;
+  }
+
+
+  .projects__gallery {
+    columns: 2;
+
+    column-gap: 18px;
+  }
+
+
+  .projects__image {
+    margin-bottom: 18px;
+  }
+
+
+  .projects__custom {
+    margin-top: 60px;
+
+    padding: 40px 30px;
+  }
+
+
+  .projects__custom h2 {
+    font-size: 25px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   2 IMAGES PER GRID
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .projects__navbar {
+    height: 65px;
+
+    padding: 0 15px;
+  }
+
+
+  .projects__main {
+    padding-top: 65px;
+  }
+
+
+  .projects__nav__title {
+    font-size: 17px;
+  }
+
+
+  .projects__nav__title::after {
+    width: 28px;
+  }
+
+
+  .projects__back {
+    font-size: 13px;
+  }
+
+
+  .projects__back svg {
+    font-size: 14px;
+  }
+
+
+  .projects__nav__spacer {
+    width: 50px;
+  }
+
+
+  .projects__container {
+    padding: 40px 15px 60px;
+  }
+
+
+  .projects__header {
+    margin-bottom: 30px;
+  }
+
+
+  .projects__header > span {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .projects__header h1 {
+    font-size: 27px;
+  }
+
+
+  .projects__header p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* 2 columns on mobile */
+
+  .projects__gallery {
+    columns: 2;
+
+    column-gap: 12px;
+  }
+
+
+  .projects__image {
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+  }
+
+
+  .projects__image:hover img {
+    transform: none;
+  }
+
+
+  /* Custom Message */
+
+  .projects__custom {
+    margin-top: 45px;
+
+    padding: 30px 18px;
+  }
+
+
+  .projects__custom__label {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .projects__custom h2 {
+    margin-bottom: 12px;
+
+    font-size: 21px;
+  }
+
+
+  .projects__custom p {
+    margin-bottom: 20px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  .projects__custom__btn {
+    padding: 10px 20px;
+
+    font-size: 13px;
+  }
+
+
+  .projects__footer {
+    padding: 18px 15px;
+  }
+
+
+  .projects__footer p {
+    font-size: 11px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   STILL KEEP 2 COLUMNS
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .projects__navbar {
+    padding: 0 12px;
+  }
+
+
+  .projects__nav__title {
+    font-size: 16px;
+  }
+
+
+  .projects__back {
+    gap: 5px;
+
+    font-size: 12px;
+  }
+
+
+  .projects__nav__spacer {
+    width: 45px;
+  }
+
+
+  .projects__container {
+    padding: 35px 10px 50px;
+  }
+
+
+  .projects__header h1 {
+    font-size: 24px;
+  }
+
+
+  .projects__gallery {
+    columns: 2;
+
+    column-gap: 10px;
+  }
+
+
+  .projects__image {
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+  }
+
+
+  .projects__custom {
+    margin-top: 40px;
+
+    padding: 27px 15px;
+  }
+
+
+  .projects__custom h2 {
+    font-size: 19px;
+  }
+
+
+  .projects__custom p {
+    font-size: 12px;
+  }
+}

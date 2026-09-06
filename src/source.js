@@ -9,6 +9,7 @@ import {
   FaYoutube,
   FaHome,
   FaBuilding,
+  FaWhatsapp,
 } from "react-icons/fa";
 import {
   user1,
@@ -187,19 +188,25 @@ export const footer = [
 
 export const socialHandles = [
   {
-    name: "Facebook",
-    icon: <FaFacebook />,
-    link: "https://www.facebook.com/profile.php?id=61594040343388",
+    name: "WhatsApp",
+    icon: <FaWhatsapp />,
+    link: "https://wa.me/919361309107",
   },
   {
     name: "Instagram",
     icon: <FaInstagram />,
     link: "https://www.instagram.com/ar_infragroup.in?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw==",
   },
-  
+  {
+    name: "Facebook",
+    icon: <FaFacebook />,
+    link: "https://www.facebook.com/profile.php?id=61594040343388",
+  },
   {
     name: "Youtube",
     icon: <FaYoutube />,
     link: "https://youtube.com/@arinfragroup?si=Gdx3mKUavYqiYIng",
   },
+  
+  
 ];
