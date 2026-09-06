@@ -158,7 +158,7 @@ const Contact = () => {
 
               <div className="contact__detail__content">
                 <span className="contact__detail__label">
-                  CALL US
+                  CONTACT US
                 </span>
 
                 <a href="tel:+919361309107">
