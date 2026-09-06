@@ -1,4 +1,6 @@
-
+/* =====================================================
+   OUR DESIGNS PAGE
+===================================================== */
 
 .designs__page {
   width: 100%;
@@ -9,7 +11,9 @@
 }
 
 
-
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .designs__navbar {
   width: 100%;
@@ -33,7 +37,6 @@
 
   z-index: 9999;
 }
-
 
 
 .designs__back {
@@ -72,7 +75,6 @@
 }
 
 
-
 .designs__nav__title {
   justify-self: center;
 
@@ -108,6 +110,9 @@
 }
 
 
+/* =====================================================
+   MAIN
+===================================================== */
 
 .designs__main {
   width: 100%;
@@ -117,8 +122,6 @@
 
   background: var(--bg-primary);
 }
-
-
 
 
 .designs__container {
@@ -131,7 +134,9 @@
 }
 
 
-
+/* =====================================================
+   HEADER
+===================================================== */
 
 .designs__header {
   width: 100%;
@@ -182,6 +187,10 @@
 }
 
 
+/* =====================================================
+   DESIGN GRID
+===================================================== */
+
 .designs__grid {
   width: 100%;
 
@@ -194,6 +203,9 @@
 }
 
 
+/* =====================================================
+   DESIGN CARD
+===================================================== */
 
 .designs__card {
   width: 100%;
@@ -211,12 +223,12 @@
   border-radius: var(--radius-2);
 
   box-shadow: var(--box-shadow);
-
-  cursor: pointer;
 }
 
 
-
+/* =====================================================
+   IMAGE
+===================================================== */
 
 .designs__card img {
   width: 100%;
@@ -228,7 +240,9 @@
 
   object-fit: cover;
 
-  transition: transform 0.6s ease;
+  transition:
+    transform 0.6s ease,
+    opacity 0.5s ease;
 }
 
 
@@ -237,7 +251,96 @@
 }
 
 
+/* =====================================================
+   IMAGE LOADING
+===================================================== */
 
+.designs__image__loader {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  background: var(--bg-secondary);
+
+  color: var(--text-muted);
+
+  font-size: 12px;
+
+  z-index: 2;
+}
+
+
+/* Spinner */
+
+.designs__spinner {
+  width: 30px;
+  height: 30px;
+
+  border: 3px solid rgba(128, 128, 128, 0.25);
+
+  border-top-color: var(--primary);
+
+  border-radius: 50%;
+
+  animation: designsSpinner 0.8s linear infinite;
+}
+
+
+@keyframes designsSpinner {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Before image loaded */
+
+.designs__loading {
+  opacity: 0;
+}
+
+
+/* After image loaded */
+
+.designs__loaded {
+  opacity: 1;
+
+  animation: designsImageFade 0.5s ease;
+}
+
+
+@keyframes designsImageFade {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
 
 .designs__overlay {
   position: absolute;
@@ -255,11 +358,10 @@
     rgba(0, 0, 0, 0) 100%
   );
 
-  transform: translateY(0);
-
   pointer-events: none;
-}
 
+  z-index: 3;
+}
 
 
 .designs__overlay h3 {
@@ -277,12 +379,16 @@
 }
 
 
+/* =====================================================
+   CUSTOM DESIGNS
+===================================================== */
 
 .designs__custom {
   width: 100%;
   max-width: 850px;
 
   margin: 75px auto 0;
+
   padding: 45px 35px;
 
   text-align: center;
@@ -369,6 +475,9 @@
 }
 
 
+/* =====================================================
+   FOOTER
+===================================================== */
 
 .designs__footer {
   width: 100%;
@@ -392,6 +501,9 @@
 }
 
 
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 930px) {
 
@@ -453,9 +565,12 @@
 }
 
 
-@media (max-width: 600px) {
+/* =====================================================
+   MOBILE
+   2 DESIGNS PER ROW
+===================================================== */
 
- 
+@media (max-width: 600px) {
 
   .designs__navbar {
     height: 65px;
@@ -469,8 +584,6 @@
   }
 
 
- 
-
   .designs__nav__title {
     font-size: 17px;
   }
@@ -479,8 +592,6 @@
   .designs__nav__title::after {
     width: 28px;
   }
-
-
 
 
   .designs__back {
@@ -498,13 +609,9 @@
   }
 
 
-
-
   .designs__container {
     padding: 40px 15px 60px;
   }
-
-
 
 
   .designs__header {
@@ -529,33 +636,56 @@
   }
 
 
-
+  /* Two design images per row */
 
   .designs__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
-    gap: 18px;
+    gap: 12px;
   }
 
 
   .designs__card {
     aspect-ratio: 4 / 3;
+
+    border-radius: 10px;
+  }
+
+
+  .designs__card:hover img {
+    transform: none;
   }
 
 
   .designs__overlay {
-    padding: 35px 15px 13px;
-
-    transform: translateY(0);
+    padding: 30px 10px 10px;
   }
 
 
   .designs__overlay h3 {
-    font-size: 14px;
+    font-size: 12px;
   }
 
 
+  /* Loading */
 
+  .designs__spinner {
+    width: 24px;
+    height: 24px;
+
+    border-width: 2px;
+  }
+
+
+  .designs__image__loader {
+    gap: 7px;
+
+    font-size: 10px;
+  }
+
+
+  /* Custom Message */
 
   .designs__custom {
     margin-top: 45px;
@@ -594,8 +724,6 @@
   }
 
 
-  /* Footer */
-
   .designs__footer {
     padding: 18px 15px;
   }
@@ -607,6 +735,9 @@
 }
 
 
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
 
 @media (max-width: 400px) {
 
@@ -633,7 +764,7 @@
 
 
   .designs__container {
-    padding: 35px 12px 50px;
+    padding: 35px 10px 50px;
   }
 
 
@@ -643,12 +774,31 @@
 
 
   .designs__grid {
-    gap: 15px;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+
+  .designs__overlay {
+    padding: 25px 8px 8px;
   }
 
 
   .designs__overlay h3 {
-    font-size: 13px;
+    font-size: 11px;
+  }
+
+
+  .designs__spinner {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .designs__image__loader {
+    font-size: 9px;
   }
 
 

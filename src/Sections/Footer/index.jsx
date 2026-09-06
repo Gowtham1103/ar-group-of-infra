@@ -1,51 +1,70 @@
 import Logo from "../../components/Logo";
 import "./Footer.css";
-import { footer } from "../../source";
+import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-scroll";
 
 function Footer() {
-    return (
-        <section id="footer">
-            <div className="overlay">
+  return (
+    <footer id="footer">
+      <div className="footer__container">
 
-                <div className="container">
+        {/* Brand */}
+        <div className="footer__brand">
+          <Logo />
 
-                    <div className="column">
-                        <Logo />
+          <p className="footer__description">
+            Building quality spaces with thoughtful design,
+            reliable workmanship, and attention to every detail.
+          </p>
+        </div>
 
-                        <p>
-                            Our mission is to build lasting spaces that inspire and uplift,
-                            combining quality craftsmanship with innovative solutions to meet
-                            the evolving needs of our clients and communities.
-                        </p>
-                    </div>
 
-                    {footer.map((foot, index) => (
-                        <div className="column" key={index}>
-                            <h4 className="title">{foot.title}</h4>
+        {/* CTA */}
+        <div className="footer__cta">
 
-                            {foot.routes.map((route, index) => (
-                                <a
-                                    href={route.href}
-                                    className="route"
-                                    key={index}
-                                >
-                                    {route.name}
-                                </a>
-                            ))}
-                        </div>
-                    ))}
+          <span className="footer__label">
+            HAVE A PROJECT IN MIND?
+          </span>
 
-                </div>
+          <h2>
+            Let's Build Something
+            <span> Great Together.</span>
+          </h2>
 
-                <div className="footer__bottom">
-                    <p>
-                        Copyright &copy; 2026 AR infra Group - All rights reserved
-                    </p>
-                </div>
+          <p>
+            Tell us about your construction, interior,
+            renovation, or restoration requirements.
+          </p>
 
-            </div>
-        </section>
-    );
+          <Link
+            to="contact"
+            smooth={true}
+            duration={600}
+            className="footer__button"
+          >
+            Start Your Project
+            <FiArrowUpRight />
+          </Link>
+
+        </div>
+
+      </div>
+
+
+      {/* Bottom */}
+      <div className="footer__bottom">
+
+        <p>
+          © {new Date().getFullYear()} AR INFRA GROUP. All Rights Reserved.
+        </p>
+
+        <p className="footer__tagline">
+          Building Dreams. Creating Spaces.
+        </p>
+
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

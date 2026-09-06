@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./OurProjects.css";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
@@ -15,6 +16,8 @@ import pimg10 from "../../assets/pimg10.jpeg";
 import pimg11 from "../../assets/pimg11.jpeg";
 
 const OurProjects = () => {
+  const [loadedImages, setLoadedImages] = useState({});
+
   const projectImages = [
     pimg1,
     pimg2,
@@ -28,6 +31,13 @@ const OurProjects = () => {
     pimg10,
     pimg11,
   ];
+
+  const handleImageLoad = (index) => {
+    setLoadedImages((previous) => ({
+      ...previous,
+      [index]: true,
+    }));
+  };
 
   return (
     <div className="projects__page">
@@ -57,7 +67,7 @@ const OurProjects = () => {
 
         <div className="projects__container">
 
-          {/* Heading */}
+          {/* Header */}
           <div className="projects__header">
 
             <span>
@@ -77,7 +87,7 @@ const OurProjects = () => {
           </div>
 
 
-          {/* Project Gallery */}
+          {/* Gallery */}
           <div className="projects__gallery">
 
             {projectImages.map((image, index) => (
@@ -86,11 +96,33 @@ const OurProjects = () => {
                 className="projects__image"
                 key={index}
               >
+
+                {/* Loading placeholder */}
+                {!loadedImages[index] && (
+                  <div className="projects__image__loader">
+
+                    <div className="projects__spinner"></div>
+
+                    <span>Loading...</span>
+
+                  </div>
+                )}
+
+
                 <img
                   src={image}
                   alt={`AR INFRA GROUP project ${index + 1}`}
                   loading="lazy"
+
+                  className={
+                    loadedImages[index]
+                      ? "projects__loaded"
+                      : "projects__loading"
+                  }
+
+                  onLoad={() => handleImageLoad(index)}
                 />
+
               </div>
 
             ))}

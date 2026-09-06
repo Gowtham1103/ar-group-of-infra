@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 import "./OurDesigns.css";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
@@ -21,6 +21,7 @@ import dimg15 from "../../assets/dimg15.jpg";
 import dimg16 from "../../assets/dmig16.jpg";
 
 const OurDesigns = () => {
+  const [loadedImages, setLoadedImages] = useState({});
 
   const designImages = [
     {
@@ -105,11 +106,17 @@ const OurDesigns = () => {
     },
   ];
 
+  const handleImageLoad = (id) => {
+    setLoadedImages((previous) => ({
+      ...previous,
+      [id]: true,
+    }));
+  };
+
   return (
     <div className="designs__page">
 
-     
-
+      {/* Navbar */}
       <nav className="designs__navbar">
 
         <Link
@@ -129,14 +136,12 @@ const OurDesigns = () => {
       </nav>
 
 
-      
-
+      {/* Main */}
       <main className="designs__main">
 
         <div className="designs__container">
 
-          
-
+          {/* Header */}
           <div className="designs__header">
 
             <span>
@@ -155,8 +160,7 @@ const OurDesigns = () => {
           </div>
 
 
-         
-
+          {/* Designs Grid */}
           <div className="designs__grid">
 
             {designImages.map((design) => (
@@ -166,19 +170,44 @@ const OurDesigns = () => {
                 key={design.id}
               >
 
+                {/* Loading */}
+                {!loadedImages[design.id] && (
+                  <div className="designs__image__loader">
+
+                    <div className="designs__spinner"></div>
+
+                    <span>Loading...</span>
+
+                  </div>
+                )}
+
+
+                {/* Image */}
                 <img
                   src={design.image}
                   alt={design.title}
                   loading="lazy"
+
+                  className={
+                    loadedImages[design.id]
+                      ? "designs__loaded"
+                      : "designs__loading"
+                  }
+
+                  onLoad={() => handleImageLoad(design.id)}
                 />
 
-                <div className="designs__overlay">
 
-                  <h3>
-                    {design.title}
-                  </h3>
+                {/* Title Overlay */}
+                {loadedImages[design.id] && (
+                  <div className="designs__overlay">
 
-                </div>
+                    <h3>
+                      {design.title}
+                    </h3>
+
+                  </div>
+                )}
 
               </div>
 
@@ -187,7 +216,7 @@ const OurDesigns = () => {
           </div>
 
 
-          
+          {/* Custom Designs */}
           <div className="designs__custom">
 
             <span className="designs__custom__label">
@@ -219,7 +248,7 @@ const OurDesigns = () => {
       </main>
 
 
-
+      {/* Footer */}
       <footer className="designs__footer">
 
         <p>
