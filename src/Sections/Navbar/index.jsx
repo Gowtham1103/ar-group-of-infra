@@ -1,11 +1,16 @@
 import { Link } from "react-scroll";
+
 import Logo from "../../components/Logo";
 import { navigations } from "../../source";
 import ThemeToggle from "../../components/ThemeToggle";
+
 import { FiMenu } from "react-icons/fi";
-import SocialHandles from "../../components/SocialHandles";
-import "./Navbar.css";
 import { FaTimes } from "react-icons/fa";
+
+import SocialHandles from "../../components/SocialHandles";
+
+import "./Navbar.css";
+
 import { useState } from "react";
 import useNavbar from "../../hook/useNavbar";
 
@@ -29,7 +34,7 @@ function Navbar() {
             >
                 <button
                     className="flex__center icon__container cancel__btn"
-                    onClick={() => setOpenSideBar(!openSideBar)}
+                    onClick={() => setOpenSideBar(false)}
                 >
                     <FaTimes />
                 </button>
@@ -43,6 +48,7 @@ function Navbar() {
                         offset={-300}
                         spy={true}
                         key={index}
+                        onClick={() => setOpenSideBar(false)}
                     >
                         {item.label}
                     </Link>
@@ -54,7 +60,7 @@ function Navbar() {
 
                 <button
                     className="flex__center icon__container menu__btn"
-                    onClick={() => setOpenSideBar(!openSideBar)}
+                    onClick={() => setOpenSideBar(true)}
                 >
                     <FiMenu />
                 </button>

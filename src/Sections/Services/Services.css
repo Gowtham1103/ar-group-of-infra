@@ -70,3 +70,16 @@
         grid-template-columns: 1fr;
     }
 }
+
+#services .services__header .section__header .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#services .services__header .section__header .btn svg {
+    display: block;
+    flex-shrink: 0;
+    margin: 0;
+}

@@ -2,7 +2,6 @@
     background: var(--bg-secondary);
 }
 
-/* About section */
 #about .about__content {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -10,7 +9,7 @@
     align-items: center;
 }
 
-/* Image */
+
 #about .about__image {
     overflow: hidden;
     border-radius: var(--radius-2);
@@ -25,14 +24,14 @@
     object-fit: cover;
 }
 
-/* About content */
+
 #about .about__info {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Key points */
+
 #about .point {
     margin: 10px 0;
     gap: 10px;
@@ -46,7 +45,6 @@
     border-radius: 50%;
 }
 
-/* Achievements */
 #about .achieve {
     margin-top: 40px;
     background-image: url("../../assets/background.jpg");
@@ -60,7 +58,7 @@
     padding: 1rem;
 }
 
-/* Tablet / Mobile */
+
 @media (max-width: 930px) {
 
     #about .about__content {

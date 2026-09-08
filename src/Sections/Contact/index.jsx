@@ -44,7 +44,7 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
 
-        {/* ================= FORM ================= */}
+       
 
         <form
           ref={form}
@@ -126,7 +126,7 @@ const Contact = () => {
         </form>
 
 
-        {/* ================= CONTACT DETAILS ================= */}
+       
 
         <div className="contact__panel">
 
@@ -175,7 +175,7 @@ const Contact = () => {
             </div>
 
 
-            {/* Email */}
+           
             <div className="contact__detail">
 
               <div className="contact__detail__icon">

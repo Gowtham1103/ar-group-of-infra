@@ -1,8 +1,3 @@
-/* =========================================================
-   PORTFOLIO NAVBAR
-   Only affects Portfolio navbar
-========================================================= */
-
 .portfolio__navbar {
   width: 100%;
   height: 75px;
@@ -23,11 +18,6 @@
 
   z-index: 9999;
 }
-
-
-/* =========================================================
-   HOME BUTTON
-========================================================= */
 
 .portfolio__navbar .portfolio__home {
   justify-self: start;
@@ -68,10 +58,6 @@
 }
 
 
-/* =========================================================
-   NAVBAR TITLE
-========================================================= */
-
 .portfolio__navbar .portfolio__nav__title {
   justify-self: center;
 
@@ -107,10 +93,6 @@
 }
 
 
-/* =========================================================
-   PORTFOLIO PAGE
-========================================================= */
-
 .portfolio__page {
   width: 100%;
   min-height: 100vh;
@@ -123,20 +105,7 @@
 }
 
 
-/*
-  IMPORTANT:
 
-  Your JSX uses:
-
-  <div className="container">
-
-  Your global index.css already controls .container.
-
-  We only target the container when it is INSIDE
-  .portfolio__page.
-
-  Therefore your Home page .container is NOT changed.
-*/
 
 .portfolio__page > .container {
   width: 100%;
@@ -148,9 +117,6 @@
 }
 
 
-/* =========================================================
-   PORTFOLIO HEADER
-========================================================= */
 
 .portfolio__page .portfolio__header {
   width: 100%;
@@ -203,10 +169,6 @@
 }
 
 
-/* =========================================================
-   PORTFOLIO GRID
-========================================================= */
-
 .portfolio__page .portfolio__grid {
   width: 100%;
 
@@ -218,9 +180,6 @@
 }
 
 
-/* =========================================================
-   PORTFOLIO CARD
-========================================================= */
 
 .portfolio__page .portfolio__card {
   width: 100%;
@@ -249,9 +208,6 @@
 }
 
 
-/* =========================================================
-   CARD IMAGE
-========================================================= */
 
 .portfolio__page .portfolio__image {
   position: relative;
@@ -269,12 +225,6 @@
   width: 100%;
   height: 100%;
 
-  /*
-    Your index.css has:
-    img { min-height: 100%; }
-
-    We override it ONLY for Portfolio images.
-  */
 
   min-height: 0;
 
@@ -292,8 +242,6 @@
   transform: scale(1.06);
 }
 
-
-/* Primary color line */
 
 .portfolio__page .portfolio__image::after {
   content: "";
@@ -318,10 +266,6 @@
   width: 100%;
 }
 
-
-/* =========================================================
-   CARD CONTENT
-========================================================= */
 
 .portfolio__page .portfolio__content {
   padding: 25px;
@@ -350,10 +294,6 @@
   line-height: 1.7;
 }
 
-
-/* =========================================================
-   VIEW MORE BUTTON
-========================================================= */
 
 .portfolio__page .portfolio__view {
   display: inline-flex;
@@ -405,9 +345,6 @@
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
 
 @media (max-width: 930px) {
 
@@ -449,10 +386,6 @@
 
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 700px) {
 
@@ -544,10 +477,6 @@
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 500px) {
 
   .portfolio__navbar {
@@ -585,10 +514,6 @@
   }
 
 }
-
-/* =========================================
-   PORTFOLIO FOOTER
-========================================= */
 
 .portfolio__footer {
   width: 100%;

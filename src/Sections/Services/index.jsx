@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaArrowTurnDown } from "react-icons/fa6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +28,7 @@ function Services() {
       }
     })
 
-      // Heading - Left to Right
+    
       .fromTo(
         ".services__header .section__header .sub__heading",
         {
@@ -40,7 +41,7 @@ function Services() {
         }
       )
 
-      // Description - Left to Right
+   
       .fromTo(
         ".services__header .section__header .description",
         {
@@ -54,7 +55,6 @@ function Services() {
         "<0.2"
       )
 
-      // Contact Button - Bottom to Top
       .fromTo(
         ".services__header .section__header .btn",
         {
@@ -67,7 +67,7 @@ function Services() {
         }
       )
 
-      // Image - Right to Left
+     
       .fromTo(
         ".image__contain",
         {
@@ -81,7 +81,7 @@ function Services() {
         "<"
       )
 
-      // Service Cards - Bottom to Top
+      
       .fromTo(
         ".service",
         {
@@ -105,8 +105,7 @@ function Services() {
 
         <div className="container">
 
-          {/* Services Header */}
-
+       
           <div className="grid services__header">
 
             <div className="section__header">
@@ -133,7 +132,7 @@ function Services() {
                 smooth={true}
                 className="btn primary"
               >
-                Contact us
+                Get a Quote <FaArrowTurnDown/>
               </Link>
 
             </div>
@@ -151,7 +150,7 @@ function Services() {
           </div>
 
 
-          {/* Services Cards */}
+         
 
           <div className="grid services">
 

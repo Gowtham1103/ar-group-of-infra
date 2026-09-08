@@ -42,7 +42,7 @@ const OurProjects = () => {
   return (
     <div className="projects__page">
 
-      {/* Navbar */}
+
       <nav className="projects__navbar">
 
         <Link
@@ -62,12 +62,11 @@ const OurProjects = () => {
       </nav>
 
 
-      {/* Main */}
       <main className="projects__main">
 
         <div className="projects__container">
 
-          {/* Header */}
+  
           <div className="projects__header">
 
             <span>
@@ -97,7 +96,7 @@ const OurProjects = () => {
                 key={index}
               >
 
-                {/* Loading placeholder */}
+            
                 {!loadedImages[index] && (
                   <div className="projects__image__loader">
 
@@ -129,8 +128,6 @@ const OurProjects = () => {
 
           </div>
 
-
-          {/* Bottom Message */}
           <div className="projects__custom">
 
             <span className="projects__custom__label">
@@ -161,7 +158,7 @@ const OurProjects = () => {
       </main>
 
 
-      {/* Footer */}
+   
       <footer className="projects__footer">
 
         <p>

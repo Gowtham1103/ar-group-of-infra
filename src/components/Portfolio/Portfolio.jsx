@@ -1,4 +1,4 @@
-// src/components/Portfolio/Portfolio.jsx
+
 
 import "./Portfolio.css";
 
@@ -47,7 +47,6 @@ function Portfolio() {
   return (
     <>
 
-      {/* Portfolio Navbar */}
 
       <nav className="portfolio__navbar">
 
@@ -71,14 +70,9 @@ function Portfolio() {
       </nav>
 
 
-      {/* Portfolio Page */}
-
       <main className="portfolio__page">
 
         <div className="container">
-
-
-          {/* Heading */}
 
           <div className="portfolio__header">
 
@@ -98,7 +92,7 @@ function Portfolio() {
           </div>
 
 
-          {/* Cards */}
+
 
           <div className="portfolio__grid">
 
@@ -109,7 +103,7 @@ function Portfolio() {
                 key={item.id}
               >
 
-                {/* Image */}
+
 
                 <div className="portfolio__image">
 
@@ -120,8 +114,6 @@ function Portfolio() {
 
                 </div>
 
-
-                {/* Content */}
 
                 <div className="portfolio__content">
 
@@ -156,8 +148,6 @@ function Portfolio() {
 
       </main>
 
-
-      {/* Footer */}
 
       <footer className="portfolio__footer">
 

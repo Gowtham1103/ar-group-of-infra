@@ -135,13 +135,10 @@ const OurDesigns = () => {
 
       </nav>
 
-
-      {/* Main */}
       <main className="designs__main">
 
         <div className="designs__container">
 
-          {/* Header */}
           <div className="designs__header">
 
             <span>
@@ -160,7 +157,6 @@ const OurDesigns = () => {
           </div>
 
 
-          {/* Designs Grid */}
           <div className="designs__grid">
 
             {designImages.map((design) => (
@@ -170,7 +166,6 @@ const OurDesigns = () => {
                 key={design.id}
               >
 
-                {/* Loading */}
                 {!loadedImages[design.id] && (
                   <div className="designs__image__loader">
 
@@ -181,8 +176,6 @@ const OurDesigns = () => {
                   </div>
                 )}
 
-
-                {/* Image */}
                 <img
                   src={design.image}
                   alt={design.title}
@@ -197,8 +190,6 @@ const OurDesigns = () => {
                   onLoad={() => handleImageLoad(design.id)}
                 />
 
-
-                {/* Title Overlay */}
                 {loadedImages[design.id] && (
                   <div className="designs__overlay">
 
@@ -216,7 +207,6 @@ const OurDesigns = () => {
           </div>
 
 
-          {/* Custom Designs */}
           <div className="designs__custom">
 
             <span className="designs__custom__label">
@@ -247,8 +237,6 @@ const OurDesigns = () => {
 
       </main>
 
-
-      {/* Footer */}
       <footer className="designs__footer">
 
         <p>
