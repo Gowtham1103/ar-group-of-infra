@@ -11,7 +11,7 @@ import pimg5 from "../../assets/pimg5.jpeg";
 import pimg6 from "../../assets/pimg6.jpeg";
 import pimg7 from "../../assets/pimg7.jpeg";
 import pimg8 from "../../assets/pimg8.jpeg";
-import pimg9 from "../../assets/pimg9.jpeg";
+
 import pimg10 from "../../assets/pimg10.jpeg";
 
 // Ongoing project images
@@ -20,7 +20,7 @@ import ogp2 from "../../assets/ogp2.jpeg";
 import ogp3 from "../../assets/ogp3.jpeg";
 import ogp4 from "../../assets/ogp4.jpeg";
 import ogp5 from "../../assets/ogp5.jpeg";
-import ogp6 from "../../assets/ogp6.jpeg";
+
 import ogp7 from "../../assets/ogp7.jpeg";
 import ogp8 from "../../assets/ogp8.jpeg";
 import ogp9 from "../../assets/ogp9.jpeg";
