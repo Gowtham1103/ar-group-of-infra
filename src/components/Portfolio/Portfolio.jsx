@@ -32,7 +32,7 @@ function Portfolio() {
     {
       id: 2,
 
-      title: "Our Projects",
+      title: "Our Projects & On Going Work's",
 
       image: projectImage,
 
